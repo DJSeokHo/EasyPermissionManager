@@ -27,10 +27,10 @@ object EasyPermissionManager {
     fun requestPermission(
         activity: Activity,
         requestCode: Int,
-        vararg permission: String,
         permissionDialogTitle: String,
         permissionDialogMessage: String,
         permissionDialogPositiveButtonTitle: String,
+        vararg permission: String,
         runnableAfterPermissionGranted: Runnable? = null
     ) {
 
