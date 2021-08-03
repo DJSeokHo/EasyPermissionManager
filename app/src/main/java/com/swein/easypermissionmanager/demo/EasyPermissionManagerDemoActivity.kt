@@ -18,11 +18,12 @@
 //        findViewById<Button>(R.id.button).setOnClickListener {
 //
 //            EasyPermissionManager.requestPermission(this, 9999,
-//                Manifest.permission.CAMERA,
-//                Manifest.permission.WRITE_EXTERNAL_STORAGE,
-//                Manifest.permission.READ_EXTERNAL_STORAGE
+//                "Permission",
+//                "permissions are necessary",
+//                "setting",
+//                listOf(Manifest.permission.CAMERA, Manifest.permission.READ_EXTERNAL_STORAGE, Manifest.permission.WRITE_EXTERNAL_STORAGE)
 //            ) {
-//                Log.d("EasyPermissionManager", "go go go")
+//                Log.d("EasyPermissionManagerDemoActivity", "go go go")
 //            }
 //
 //        }

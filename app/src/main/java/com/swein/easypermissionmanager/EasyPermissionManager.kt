@@ -30,17 +30,17 @@ object EasyPermissionManager {
         permissionDialogTitle: String,
         permissionDialogMessage: String,
         permissionDialogPositiveButtonTitle: String,
-        vararg permission: String,
+        permissions: List<String>,
         runnableAfterPermissionGranted: Runnable? = null
     ) {
 
         permissionNotGrantedList.clear()
 
-        for (i in permission.indices) {
+        for (i in permissions.indices) {
 
-            if (ActivityCompat.checkSelfPermission(activity, permission[i]) != PackageManager.PERMISSION_GRANTED) {
+            if (ActivityCompat.checkSelfPermission(activity, permissions[i]) != PackageManager.PERMISSION_GRANTED) {
                 // if permission is not granted
-                permissionNotGrantedList.add(permission[i])
+                permissionNotGrantedList.add(permissions[i])
             }
         }
 
