@@ -28,9 +28,9 @@ object EasyPermissionManager {
         activity: Activity,
         requestCode: Int,
         vararg permission: String,
-        permissionDialogTitle: String = "Permission",
-        permissionDialogMessage: String = "Request permissions",
-        permissionDialogPositiveButtonTitle: String = "Confirm",
+        permissionDialogTitle: String,
+        permissionDialogMessage: String,
+        permissionDialogPositiveButtonTitle: String,
         runnableAfterPermissionGranted: Runnable? = null
     ) {
 
