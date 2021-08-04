@@ -1,8 +1,9 @@
 # EasyPermissionManager
 Android runtime permissions manager
 
-step 1: Add it in your root build.gradle at the end of repositories:
+# step 1: Add it in your root build.gradle at the end of repositories:
 
+```
 allprojects {
 
   repositories {
@@ -13,11 +14,14 @@ allprojects {
   }
   
 }
+```
 
-step 2: 
+# step 2: Add the dependency
 
+```
 dependencies {
 
   implementation 'com.github.DJSeokHo.EasyPermissionManager:EasyPermissionManager:1.0.7'
   
 }
+```
