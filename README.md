@@ -33,7 +33,7 @@ dependencies {
 ...
 ...
 
-PermissionManager.requestPermission(this,
+EasyPermissionManager.requestPermission(this,
     9999,
     "Permission",
     "permissions are necessary",
@@ -57,13 +57,13 @@ override fun onRequestPermissionsResult(
     permissions: Array<out String>,
     grantResults: IntArray
 ) {
-    PermissionManager.onRequestPermissionsResult(requestCode, permissions, grantResults)
+    EasyPermissionManager.onRequestPermissionsResult(requestCode, permissions, grantResults)
     super.onRequestPermissionsResult(requestCode, permissions, grantResults)
 }
 
 // add this in your activity
 override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
-    PermissionManager.onActivityResult(requestCode, resultCode)
+    EasyPermissionManager.onActivityResult(requestCode, resultCode)
     super.onActivityResult(requestCode, resultCode, data)
 }
 ```
