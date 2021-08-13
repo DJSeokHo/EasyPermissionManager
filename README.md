@@ -25,3 +25,45 @@ dependencies {
   
 }
 ```
+
+# How to use:
+```
+
+...
+...
+...
+
+PermissionManager.requestPermission(this,
+    9999,
+    "Permission",
+    "permissions are necessary",
+    "setting",
+    listOf(Manifest.permission.CAMERA,
+        Manifest.permission.ACCESS_FINE_LOCATION,
+        Manifest.permission.ACCESS_COARSE_LOCATION,
+        Manifest.permission.WRITE_EXTERNAL_STORAGE,
+        Manifest.permission.READ_EXTERNAL_STORAGE)
+    ) {
+
+    yourMethodShouldRunAfterAllPermissionGranted()
+}
+        
+...
+...
+            
+// add this in your activity
+override fun onRequestPermissionsResult(
+    requestCode: Int,
+    permissions: Array<out String>,
+    grantResults: IntArray
+) {
+    PermissionManager.onRequestPermissionsResult(requestCode, permissions, grantResults)
+    super.onRequestPermissionsResult(requestCode, permissions, grantResults)
+}
+
+// add this in your activity
+override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+    PermissionManager.onActivityResult(requestCode, resultCode)
+    super.onActivityResult(requestCode, resultCode, data)
+}
+```
