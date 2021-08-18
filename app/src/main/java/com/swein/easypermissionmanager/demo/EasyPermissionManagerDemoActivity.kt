@@ -1,3 +1,6 @@
+import android.widget.Toast
+import com.swein.easypermissionmanager.EasyPermissionManager
+
 //package com.swein.easypermissionmanager.demo
 //
 //import android.Manifest
@@ -11,35 +14,31 @@
 //
 //class EasyPermissionManagerDemoActivity : AppCompatActivity() {
 //
+//    private val permissionManager = EasyPermissionManager(this)
 //    override fun onCreate(savedInstanceState: Bundle?) {
 //        super.onCreate(savedInstanceState)
 //        setContentView(R.layout.activity_easy_permission_manager_demo)
 //
 //        findViewById<Button>(R.id.button).setOnClickListener {
 //
-//            EasyPermissionManager.requestPermission(this, 9999,
+//            permissionManager.requestPermission(
 //                "Permission",
 //                "permissions are necessary",
 //                "setting",
-//                listOf(Manifest.permission.CAMERA, Manifest.permission.READ_EXTERNAL_STORAGE, Manifest.permission.WRITE_EXTERNAL_STORAGE)
+//                arrayOf(Manifest.permission.CAMERA,
+//                Manifest.permission.ACCESS_FINE_LOCATION,
+//                Manifest.permission.ACCESS_COARSE_LOCATION,
+//                Manifest.permission.WRITE_EXTERNAL_STORAGE,
+//                Manifest.permission.READ_EXTERNAL_STORAGE)
 //            ) {
-//                Log.d("EasyPermissionManagerDemoActivity", "go go go")
+//
+//                yourMethodShouldRunAfterAllPermissionGranted()
 //            }
 //
 //        }
 //    }
 //
-//    override fun onRequestPermissionsResult(
-//        requestCode: Int,
-//        permissions: Array<out String>,
-//        grantResults: IntArray
-//    ) {
-//        EasyPermissionManager.onRequestPermissionsResult(requestCode, permissions, grantResults)
-//        super.onRequestPermissionsResult(requestCode, permissions, grantResults)
-//    }
-//
-//    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
-//        EasyPermissionManager.onActivityResult(requestCode, resultCode)
-//        super.onActivityResult(requestCode, resultCode, data)
+//    private fun yourMethodShouldRunAfterAllPermissionGranted() {
+//        Toast.makeText(this, "All permission is ok, go go go", Toast.LENGTH_SHORT).show()
 //    }
 //}
