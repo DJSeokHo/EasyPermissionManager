@@ -21,7 +21,7 @@ allprojects {
 ```
 dependencies {
 
-  implementation 'com.github.DJSeokHo.EasyPermissionManager:EasyPermissionManager:1.0.9'
+  implementation 'com.github.DJSeokHo:EasyPermissionManager:1.0.9'
   
 }
 ```
